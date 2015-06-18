@@ -1,0 +1,27 @@
+You have to replace localhost with the according host / ip adress where your services are running
+
+git clone https://github.com/Twain69/hystrixPrototype.git
+
+Remote service:
+cd hystrixPrototype/remoteService
+mvn clean spring-boot:run
+
+MyService:
+cd hystrixPrototype/myService
+mvn clean spring-boot:run
+
+Chrome Browser Plugin DHC:
+GET localhost:8080/userdataClassic/user1
+GET localhost:8080/userdata/user1
+
+Hystrix Dashboard:
+git clone https://github.com/Netflix/Hystrix.git
+cd Hystrix/hystrix-dashboard
+../gradlew jettyRun
+http://localhost:7979/hystrix-dashboard/
+
+Fetch hystrix statistics stream:
+curl http://localhost:8080/hystrix.stream
+
+Set delayed on/off:
+curl http://localhost:9090/delayed/true
