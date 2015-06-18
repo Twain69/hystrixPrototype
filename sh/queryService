@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for i in $(seq 1 $1); do
+	curl -i -X GET  'http://localhost:8080/userdataResilient?username=user1' >/dev/null 2>&1 &
+done
